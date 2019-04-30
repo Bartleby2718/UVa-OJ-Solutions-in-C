@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 char *whatToSay(unsigned index)
 {
     unsigned remainder = index % 16;
@@ -41,7 +40,7 @@ int main()
      */
     unsigned numPeople, i;
     scanf("%u", &numPeople);
-    char names[numPeople][102]; /* TODO: doesn't work if this is changed to char *names[numPeople]*/
+    char names[numPeople][102]; /* char *names[numPeople] is also okay if memory is allocated dynamically */
     for (i = 0; i < numPeople; ++i)
     {
         char name[102] = ""; /* at most 100 characters and do not have whitespace characters inside */
